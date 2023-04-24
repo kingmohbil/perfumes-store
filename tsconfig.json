@@ -22,7 +22,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/styles/styled_perfume_details.js"
+    "components/styles/styled_perfume_details.js",
+    "pages/_document.js"
   ],
   "exclude": ["node_modules"]
 }
