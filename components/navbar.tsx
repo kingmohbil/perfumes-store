@@ -4,10 +4,12 @@ export default function Navbar() {
   return (
     <StyledNavbar>
       <nav>
-        <h1>1% Perfumes</h1>
+        <Link href="/" className="active">
+          <h1>1% Perfumes</h1>
+        </Link>
         <div className="toggle"></div>
         <div className="navbar-links">
-          <Link href="#">Products</Link>
+          <Link href="products">Products</Link>
           <Link href="#">RecommendMe</Link>
           <Link href="#">Login</Link>
           <Link href="#">Cart</Link>

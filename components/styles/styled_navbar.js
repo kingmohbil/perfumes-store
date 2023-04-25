@@ -8,9 +8,6 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
   }
-  h1 {
-    border-bottom: 4px solid black;
-  }
 
   .navbar-links {
     display: flex;
@@ -26,7 +23,13 @@ const Container = styled.div`
     transition-origin: bottom right;
   }
 
-  a:hover {
+  a {
+    h1 {
+    }
+  }
+
+  a:hover,
+  a.active {
     border-bottom: 4px solid black;
   }
 
