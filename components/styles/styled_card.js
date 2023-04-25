@@ -7,35 +7,61 @@ const Container = styled.div`
   background: white;
   box-shadow: 2px 10px 5px rgba(0, 0, 0, 0.4);
 
-  height: 400px;
+  height: 420px;
   width: 300px;
   .card-details {
     align-self: start;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 18px 36px;
+    padding: 0.8rem;
     flex-grow: 1;
     width: 100%;
-    background: #f0f0f0;
+    background: #21222d;
+    border-radius: 0 40% 0 0;
+    color: #fff;
   }
 
-  p {
-    font-size: 18px;
-    font-weight: 500;
-    color: gray;
+  .card-description {
+    font-size: 1.1rem;
+    font-weight: 100;
     flex-grow: 1;
+    color: #5f5f6b;
+  }
+
+  .card-actions {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .card-price {
-    color: var(--green-color);
+    font-weight: 700;
+    font-size: 1.5rem;
   }
 
-  img {
-    transition: all 0.2s;
+  button {
+    border: none;
+    outline: none;
+    background: #35353f;
+    color: #fff;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    cursor: pointer;
   }
-  img:hover {
-    transform: scale(1.2);
+
+  .cart {
+    width: 160px;
+  }
+
+  button:hover {
+    opacity: 0.7;
+  }
+
+  .card-buttons {
+    position: relative;
   }
 `;
 
