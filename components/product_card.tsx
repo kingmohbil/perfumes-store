@@ -21,7 +21,7 @@ export default function Card() {
             occasions.
           </p>
           <div className="card-actions">
-            <h3 className="card-price">$200</h3>
+            <h3 className="price">$200</h3>
             <div className="card-buttons">
               <button className="cart">Add to Cart</button>
             </div>

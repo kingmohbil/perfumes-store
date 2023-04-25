@@ -6,6 +6,7 @@ const Container = styled.div`
   align-items: center;
   background: white;
   box-shadow: 2px 10px 5px rgba(0, 0, 0, 0.4);
+  cursor: grab;
 
   height: 420px;
   width: 300px;
@@ -23,10 +24,10 @@ const Container = styled.div`
   }
 
   .card-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 100;
     flex-grow: 1;
-    color: #5f5f6b;
+    color: #cbcbcb;
   }
 
   .card-actions {
@@ -42,6 +43,7 @@ const Container = styled.div`
   }
 
   button {
+    cursor: pointer;
     border: none;
     outline: none;
     background: #35353f;
@@ -49,7 +51,7 @@ const Container = styled.div`
     height: 40px;
     border-radius: 50px;
     font-size: 1.3rem;
-    cursor: pointer;
+    user-select: none;
   }
 
   .cart {
@@ -62,6 +64,11 @@ const Container = styled.div`
 
   .card-buttons {
     position: relative;
+  }
+
+  .price,
+  img {
+    user-select: none;
   }
 `;
 

@@ -5,7 +5,7 @@ const Container = styled.div`
   justify-content: center;
 
   width: 100%;
-  height: 450px;
+  height: 500px;
   transform: translateY(15vh);
 
   .swiper-container {
