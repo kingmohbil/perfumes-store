@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Cool water",
+      "price": 100,
+      "category": "men"
+    },
+    {
+      "id": 2,
+      "name": "suvage",
+      "price": 100,
+      "category": "men"
+    },
+    {
+      "id": 3,
+      "name": "Si",
+      "price": 100,
+      "category": "women"
+    },
+    {
+      "id": 4,
+      "name": "Chanel",
+      "price": 100,
+      "category": "women"
+    },
+    {
+      "id": 5,
+      "name": "1 Million",
+      "price": 100,
+      "category": "men"
+    }
+  ]
+}
