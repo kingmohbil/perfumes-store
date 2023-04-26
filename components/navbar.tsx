@@ -1,6 +1,10 @@
 import StyledNavbar from './styles/styled_navbar';
 import Link from 'next/link';
-export default function Navbar() {
+import { LinksInterface } from 'lib/store/slices/main_nav_slice';
+type PropsType = {
+  links: LinksInterface[];
+};
+export default function Navbar({ links = [] }: PropsType) {
   return (
     <StyledNavbar>
       <nav>
@@ -9,10 +13,17 @@ export default function Navbar() {
         </Link>
         <div className="toggle"></div>
         <div className="navbar-links">
-          <Link href="products">Products</Link>
-          <Link href="#">RecommendMe</Link>
-          <Link href="#">Login</Link>
-          <Link href="#">Cart</Link>
+          {links.map((link) => {
+            return (
+              <Link
+                key={link.index}
+                href={link.href}
+                className={link.active ? 'active' : ''}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
       </nav>
     </StyledNavbar>
