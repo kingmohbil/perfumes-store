@@ -1,18 +1,22 @@
 import Navbar from 'components/navbar';
 import SideNav from 'components/side_nav';
 import ProductsContainer from 'components/products';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from 'lib/store/store';
+import { activate } from 'lib/store/slices/main_nav_slice';
+
 export default function ProductsList() {
+  const dispatch = useDispatch();
+  const links = useSelector((state: RootState) => state.main_nav);
+  useEffect(() => {
+    dispatch(activate({ index: 0 }));
+  });
   return (
     <>
-      <Navbar />
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
-        <SideNav />
-        <ProductsContainer />
-      </div>
+      <Navbar links={links} />
+      <SideNav />
+      <ProductsContainer />
     </>
   );
 }
