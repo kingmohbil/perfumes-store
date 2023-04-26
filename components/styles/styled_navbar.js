@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Container = styled.nav`
+  grid-column: 1 / 3;
+  min-width: 100%;
   nav {
     display: flex;
     padding: 20px;

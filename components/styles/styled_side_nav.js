@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
-const Container = styled.nav`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 50px 20px;
   width: 200px;
+  grid-row: 2 / 4;
 
   a {
     font-size: 24px;

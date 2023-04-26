@@ -6,7 +6,6 @@ const Container = styled.div`
   align-items: center;
   background: white;
   box-shadow: 2px 10px 5px rgba(0, 0, 0, 0.4);
-  cursor: grab;
 
   height: 420px;
   width: 300px;

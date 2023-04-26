@@ -1,13 +1,10 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-
-  width: 100%;
+  grid-column: 1 / 3;
+  justify-self: center;
+  align-self: center;
   height: 500px;
-  transform: translateY(15vh);
-
   .swiper-container {
     height: 100%;
     width: 400px;
@@ -18,6 +15,7 @@ const Container = styled.div`
   .swiper-slide {
     display: flex;
     justify-content: center;
+    cursor: grab;
   }
 
   .swiper {

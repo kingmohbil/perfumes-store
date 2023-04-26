@@ -22,14 +22,16 @@ html,
 body {
   max-width: 100vw;
   min-height: 100vh;
+  max-height: 100vh;
   font-family: 'Libre Baskerville', serif;
+  background: var(--foreground);
 }
 #__next {
   min-height: 100vh;
-}
-
-body {
-  background: var(--foreground);
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr 8fr;
   overflow: hidden;
 }
 
