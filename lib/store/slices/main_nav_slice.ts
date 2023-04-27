@@ -23,11 +23,6 @@ const initialState: LinksInterface[] = [
     name: 'Login',
     href: '/auth/signin',
   },
-  {
-    index: 3,
-    name: 'Cart',
-    href: '/cart',
-  },
 ];
 
 export const mainNavSlice = createSlice({

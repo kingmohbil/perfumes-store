@@ -16,7 +16,8 @@ const Container = styled.nav`
     gap: 16px;
   }
 
-  a {
+  a,
+  button {
     font-size: 24px;
     color: #1c1c1c;
     font-weight: 500;
@@ -26,12 +27,18 @@ const Container = styled.nav`
   }
 
   a:hover,
-  a.active {
+  a.active,
+  button:hover {
     border-bottom: 4px solid black;
   }
 
   .toggle {
     display: none;
+  }
+  button {
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
   }
 `;
 

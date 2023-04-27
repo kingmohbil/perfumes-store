@@ -24,6 +24,7 @@ export default function Navbar({ links = [] }: PropsType) {
               </Link>
             );
           })}
+          <button>Cart</button>
         </div>
       </nav>
     </StyledNavbar>
