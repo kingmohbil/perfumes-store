@@ -25,11 +25,6 @@ const Container = styled.nav`
     transition-origin: bottom right;
   }
 
-  a {
-    h1 {
-    }
-  }
-
   a:hover,
   a.active {
     border-bottom: 4px solid black;

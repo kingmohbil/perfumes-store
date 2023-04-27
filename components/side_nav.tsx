@@ -1,18 +1,24 @@
 import StyledNav from './styles/styled_side_nav';
 import Link from 'next/link';
-export default function SideNav() {
+import { LinksInterface } from 'lib/store/slices/main_nav_slice';
+type PropsType = {
+  links: LinksInterface[];
+};
+export default function SideNav({ links = [] }: PropsType) {
   return (
     <>
       <StyledNav>
-        <Link href="/products/men">
-          <h3>Men</h3>
-        </Link>
-        <Link href="/products/women">
-          <h3>Women</h3>
-        </Link>
-        <Link href="/products/unisex">
-          <h3>Unisex</h3>
-        </Link>
+        {links.map((link) => {
+          return (
+            <Link
+              key={link.index}
+              href={link.href}
+              className={link.active ? 'active' : ''}
+            >
+              {link.name}
+            </Link>
+          );
+        })}
       </StyledNav>
     </>
   );
