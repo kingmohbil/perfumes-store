@@ -9,13 +9,14 @@ import { activate } from 'lib/store/slices/main_nav_slice';
 export default function ProductsList() {
   const dispatch = useDispatch();
   const links = useSelector((state: RootState) => state.main_nav);
+  const sideLinks = useSelector((state: RootState) => state.side_nav);
   useEffect(() => {
     dispatch(activate({ index: 0 }));
   });
   return (
     <>
       <Navbar links={links} />
-      <SideNav />
+      <SideNav links={sideLinks} />
       <ProductsContainer />
     </>
   );
