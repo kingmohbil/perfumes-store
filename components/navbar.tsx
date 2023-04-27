@@ -1,10 +1,13 @@
 import StyledNavbar from './styles/styled_navbar';
 import Link from 'next/link';
 import { LinksInterface } from 'lib/store/slices/main_nav_slice';
+import { useState } from 'react';
+import CartModal from './cart_modal';
 type PropsType = {
   links: LinksInterface[];
 };
 export default function Navbar({ links = [] }: PropsType) {
+  const [modal, setModal] = useState(false);
   return (
     <StyledNavbar>
       <nav>
@@ -24,7 +27,19 @@ export default function Navbar({ links = [] }: PropsType) {
               </Link>
             );
           })}
-          <button>Cart</button>
+          <button
+            onClick={() => {
+              setModal(true);
+            }}
+          >
+            Cart
+          </button>
+          <CartModal
+            active={modal}
+            closeModal={() => {
+              setModal(false);
+            }}
+          />
         </div>
       </nav>
     </StyledNavbar>
