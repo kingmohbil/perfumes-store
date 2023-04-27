@@ -61,10 +61,6 @@ const Container = styled.div`
     opacity: 0.7;
   }
 
-  .card-buttons {
-    position: relative;
-  }
-
   .price,
   img {
     user-select: none;
