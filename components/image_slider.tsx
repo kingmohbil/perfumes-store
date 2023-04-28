@@ -1,14 +1,13 @@
 import Card from '../components/product_card';
 import StyledSlider from './styles/styled_image_slider';
 import { Navigation, Pagination, Autoplay } from 'swiper';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const ImageSlider = () => {
-  const swiper = useSwiper();
   return (
     <StyledSlider>
       <div className="swiper-container">
@@ -29,16 +28,48 @@ const ImageSlider = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <Card />
+            <Card
+              id="1"
+              name="Cool Water"
+              description="A perfect perfume in winter occasions"
+              image="/images/CoolWater.jpeg"
+              price={200}
+              category="men"
+              rating={1}
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Card />
+            <Card
+              id="1"
+              name="Cool Water"
+              description="A perfect perfume in winter occasions"
+              image="/images/CoolWater.jpeg"
+              price={200}
+              category="men"
+              rating={1}
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Card />
+            <Card
+              id="1"
+              name="Cool Water"
+              description="A perfect perfume in winter occasions"
+              image="/images/CoolWater.jpeg"
+              price={200}
+              category="men"
+              rating={1}
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Card />
+            <Card
+              id="1"
+              name="Cool Water"
+              description="A perfect perfume in winter occasions"
+              image="/images/CoolWater.jpeg"
+              price={200}
+              category="men"
+              rating={1}
+            />
           </SwiperSlide>
         </Swiper>
       </div>
