@@ -6,8 +6,8 @@ const Container = styled.div`
   justify-content: space-around;
   gap: 16px;
   .title {
-    text-align: center;
     flex-grow: 1;
+    text-align: center;
   }
 `;
 

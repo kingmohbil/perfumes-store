@@ -12,7 +12,7 @@ const Container = styled.div`
   right: 0;
   bottom: 0;
   background-color: white;
-  width: 400px;
+  width: 500px;
   flex-direction: column;
   gap: 30px;
   box-shadow: -10px 0 5px rgba(0, 0, 0, 0.2);
