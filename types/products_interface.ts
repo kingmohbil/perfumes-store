@@ -6,4 +6,5 @@ export default interface ProductInterface {
   category: string;
   description: string;
   rating: number;
+  link?: string;
 }
