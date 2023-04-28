@@ -14,6 +14,7 @@ const Container = styled.div`
   background-color: white;
   width: 400px;
   flex-direction: column;
+  gap: 30px;
   box-shadow: -10px 0 5px rgba(0, 0, 0, 0.2);
 
   &.active {
@@ -26,6 +27,16 @@ const Container = styled.div`
   }
   button:hover {
     border-color: transparent;
+  }
+
+  .total-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .checkout-btn {
+    display: flex;
+    align-self: center;
   }
 `;
 
