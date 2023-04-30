@@ -1,12 +1,19 @@
 import StyledItem from './styles/styled_cart_item';
 import { useDispatch } from 'react-redux';
-import { addItem } from 'lib/store/slices/cart_slice';
+import { addItem, decrementItem } from 'lib/store/slices/cart_slice';
 import CartType from 'types/cart_interface';
 export default function CartItem(props: CartType) {
   const dispatch = useDispatch();
   return (
     <StyledItem id={props.id}>
-      <button className="decrement-btn"> - </button>
+      <button
+        className="decrement-btn"
+        onClick={() => {
+          dispatch(decrementItem({ id: props.id }));
+        }}
+      >
+        -
+      </button>
       <p className="title">{props.name}</p>
       <button
         className="increment-btn"

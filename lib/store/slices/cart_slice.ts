@@ -14,33 +14,56 @@ interface ActionType {
   payload: CartItem;
 }
 
+interface RemovalPayload {
+  payload: {
+    id: string;
+  };
+}
+
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
     addItem: (state, { payload }: ActionType) => {
-      console.log('Add Item reducer called');
-      if (state.items.length === 0) {
+      const index = state.items.findIndex(
+        (product) => product.id === payload.id
+      );
+      if (index === -1) {
         state.items.push({ ...payload, count: 1 });
-        state.total = payload.price;
+        state.total += payload.price;
       } else {
-        const index = state.items.findIndex(
-          (product) => product.id === payload.id
-        );
-        if (index === -1) {
-          state.items.push({ ...payload, count: 1 });
-          state.total += payload.price;
+        const count = state.items[index].count || 1;
+        state.items[index].count = count + 1;
+        state.total += payload.price;
+      }
+
+      console.log(current(state));
+    },
+    decrementItem: (state, { payload }: RemovalPayload) => {
+      const index = state.items.findIndex((item) => item.id === payload.id);
+      if (index !== -1) {
+        const count = state.items[index].count || 1;
+        if (count > 1) {
+          state.items[index].count = count - 1;
+          state.total -= state.items[index].price;
         } else {
-          const count = state.items[index].count || 1;
-          state.items[index].count = count + 1;
-          state.total += payload.price;
+          state.total -= state.items[index].price;
+          state.items = state.items.filter((item) => item.id !== payload.id);
         }
       }
-      console.log(current(state));
+    },
+    removeItem: (state, { payload }: RemovalPayload) => {
+      state.items = state.items.filter((item) => {
+        if (item.id === payload.id) {
+          state.total -= item.price * (item.count || 1);
+          return true;
+        }
+        return false;
+      });
     },
   },
 });
 
 export default cartSlice.reducer;
 
-export const { addItem } = cartSlice.actions;
+export const { addItem, decrementItem } = cartSlice.actions;
