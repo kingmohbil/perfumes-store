@@ -24,7 +24,9 @@
     "**/*.ts",
     "**/*.tsx",
     "components/styles/styled_perfume_details.js",
-    "pages/_document.js"
+    "pages/_document.js",
+    "pages/api/middleware.js",
+    "pages/api/products.ts"
   ],
   "exclude": ["node_modules"]
 }
