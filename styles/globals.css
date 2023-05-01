@@ -3,10 +3,11 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
+  --main-font: 'Libre Baskerville', serif;
   --foreground: #f9f9f9;
   --secondary-color: #1c1c1c;
   --green-color: #009063;
+  --light-blue: #5fa8d3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,7 +24,7 @@ body {
   max-width: 100vw;
   min-height: 100vh;
   max-height: 100vh;
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--main-font);
   background: var(--foreground);
 }
 #__next {

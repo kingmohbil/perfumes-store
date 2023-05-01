@@ -30,7 +30,7 @@ const Container = styled.div`
     bottom: -2px;
     width: 100%;
     height: 100%;
-    border-bottom: 2px solid #5fa8d3;
+    border-bottom: 2px solid var(--light-blue);
     transform: translateX(-100%);
     transition: transform 0.3s ease;
   }
@@ -46,7 +46,7 @@ const Container = styled.div`
   input:valid + label span {
     transform: translateY(-150%);
     font-size: 14px;
-    color: #5fa8d3;
+    color: var(--light-blue);
   }
 
   input:invalid.invalid + label span {
