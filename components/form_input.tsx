@@ -6,6 +6,7 @@ type PropsType = {
   name: string;
   type: string;
   required?: boolean;
+  validationMessage?: string;
 };
 
 export default function InputField(props: PropsType) {
@@ -16,13 +17,15 @@ export default function InputField(props: PropsType) {
         type={props.type}
         required={props.required || false}
         name={props.id}
-        className={error ? 'invalid' : ''}
-        onChange={(e: React.ChangeEvent) => {}}
+        onInvalid={(e: any) => {
+          e.target.setCustomValidity(props.validationMessage);
+        }}
+        onInput={(e: any) => {
+          e.target.setCustomValidity('');
+        }}
       />
       <label htmlFor={props.id}>
-        <span id="placeholder">
-          {props.name} {error}
-        </span>
+        <span>{props.name}</span>
       </label>
     </StyledInput>
   );

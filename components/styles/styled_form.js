@@ -53,10 +53,6 @@ const Container = styled.div`
     border-color: var(--light-blue);
   }
 
-  #productImage {
-    display: none;
-  }
-
   .col-6 {
     display: flex;
     justify-content: space-between;

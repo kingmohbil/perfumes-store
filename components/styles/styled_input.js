@@ -35,7 +35,7 @@ const Container = styled.div`
     transition: transform 0.3s ease;
   }
 
-  #placeholder {
+  span {
     position: absolute;
     bottom: 5px;
     left: 0%;
@@ -47,10 +47,6 @@ const Container = styled.div`
     transform: translateY(-150%);
     font-size: 14px;
     color: var(--light-blue);
-  }
-
-  input:invalid.invalid + label span {
-    color: red;
   }
 
   input:focus + label::after,
