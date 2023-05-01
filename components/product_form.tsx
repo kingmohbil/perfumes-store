@@ -10,8 +10,24 @@ export default function ProductForm() {
           e.preventDefault();
         }}
       >
-        <FormInput type="text" name="* Name" id="name" required={true} />
-        <FormInput type="number" name="* Price" id="price" required={true} />
+        <FormInput
+          id="name"
+          type="text"
+          name="* Name"
+          validationMessage="Name Field must be at least 2 characters, not exceeding 30"
+          minLength={1}
+          maxLength={30}
+          required={true}
+        />
+        <FormInput
+          id="price"
+          type="number"
+          name="* Price"
+          validationMessage="Price Field must be between 1, 100"
+          min={1}
+          max={100}
+          required={true}
+        />
         <Textarea id="description" name="* Description" min={10} max={100} />
         <div className="col-6">
           <button type="button">

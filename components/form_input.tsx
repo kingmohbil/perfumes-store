@@ -6,11 +6,14 @@ type PropsType = {
   name: string;
   type: string;
   required?: boolean;
-  validationMessage?: string;
+  validationMessage: string;
+  min?: number;
+  max?: number;
+  maxLength?: number;
+  minLength?: number;
 };
 
 export default function InputField(props: PropsType) {
-  const [error, setError] = useState(false);
   return (
     <StyledInput>
       <input
@@ -23,6 +26,10 @@ export default function InputField(props: PropsType) {
         onInput={(e: any) => {
           e.target.setCustomValidity('');
         }}
+        min={props.min || 0}
+        max={props.max || 0}
+        minLength={props.minLength || 10}
+        maxLength={props.maxLength || 20}
       />
       <label htmlFor={props.id}>
         <span>{props.name}</span>
