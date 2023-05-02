@@ -43,7 +43,8 @@ const Container = styled.div`
   }
 
   input:focus + label span,
-  input:valid + label span {
+  input:valid + label span,
+  .invalid + label span {
     transform: translateY(-150%);
     font-size: 14px;
     color: var(--light-blue);

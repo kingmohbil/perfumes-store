@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { useState } from 'react';
 
 import StyledInput from './styles/styled_input';
 type PropsType = {
@@ -14,14 +14,19 @@ type PropsType = {
 };
 
 export default function InputField(props: PropsType) {
+  const [error, setError] = useState(false);
   return (
     <StyledInput>
       <input
+        className={error ? 'invalid' : ''}
         type={props.type}
         required={props.required || false}
         name={props.id}
         onInvalid={(e: any) => {
           e.target.setCustomValidity(props.validationMessage);
+        }}
+        onBlur={(e) => {
+          if (e.target.value != '') setError(true);
         }}
         onInput={(e: any) => {
           e.target.setCustomValidity('');
