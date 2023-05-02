@@ -1,13 +1,17 @@
 import StyledForm from './styles/styled_form';
 import FormInput from './form_input';
 import Textarea from './textarea';
-import React from 'react';
+import React, { useState } from 'react';
 export default function ProductForm() {
+  const [image, setImage] = useState(false);
   return (
     <StyledForm>
       <form
-        onSubmit={(e) => {
+        onSubmit={(e: any) => {
           e.preventDefault();
+          if (!e.target.productImage.files[0]) {
+            setImage(true);
+          }
         }}
       >
         <FormInput
@@ -32,6 +36,8 @@ export default function ProductForm() {
         <div className="col-6">
           <button type="button">
             <label htmlFor="productImage">Add Image</label>
+            {/* TODO styling the text here */}
+            {image ? <span>You Must Add an image.</span> : ''}
           </button>
           <div
             style={{
